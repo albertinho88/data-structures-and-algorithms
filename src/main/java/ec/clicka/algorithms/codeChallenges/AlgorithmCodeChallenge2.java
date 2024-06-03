@@ -1,4 +1,4 @@
-package ec.clicka.algorithms.code.challenges;
+package ec.clicka.algorithms.codeChallenges;
 
 import ec.clicka.util.ArrayUtil;
 
@@ -8,7 +8,7 @@ import ec.clicka.util.ArrayUtil;
  * - Sort the usual example array
  * - You can start with the existing code
  */
-public class CodeChallenge2 {
+public class AlgorithmCodeChallenge2 {
     public static void main(String[] args) {
 
         int[] numbers = {20,35,-15,7,55,1,-22};

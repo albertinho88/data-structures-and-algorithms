@@ -1,4 +1,4 @@
-package ec.clicka.algorithms.code.challenges;
+package ec.clicka.algorithms.codeChallenges;
 
 import ec.clicka.util.ArrayUtil;
 
@@ -8,7 +8,7 @@ import ec.clicka.util.ArrayUtil;
  * - All values are in lowercase, so don't worry about uppercasing/lowercasing the values
  * - You can use the existing code
  */
-public class CodeChallenge3 {
+public class AlgorithmCodeChallenge3 {
     public static void main(String[] args) {
         String[] stringsArray = {"bcdef", "dbaqc", "abcde", "omadd","bbbbb"};
         System.out.println(ArrayUtil.printArray(stringsArray, 0,stringsArray.length));

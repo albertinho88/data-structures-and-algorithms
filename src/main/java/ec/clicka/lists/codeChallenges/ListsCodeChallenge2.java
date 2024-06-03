@@ -1,4 +1,4 @@
-package ec.clicka.lists.code.challenges;
+package ec.clicka.lists.codeChallenges;
 
 import ec.clicka.lists.linked.singly.IntegerLinkedList;
 
@@ -9,7 +9,7 @@ import ec.clicka.lists.linked.singly.IntegerLinkedList;
  * - If we insert 4,2,1,5 list should look like: HEAD->1->2->4->5->null
  * - IntegerLinkedList is a singly-linked list
  */
-public class CodeChallenge2 {
+public class ListsCodeChallenge2 {
     public static void main(String[] args) {
 
         Integer one = 1;
@@ -25,6 +25,12 @@ public class CodeChallenge2 {
         list.insertSorted(one);
         list.printList();
         list.insertSorted(four);
+        list.printList();
+        list.insertSorted(two);
+        list.printList();
+        list.insertSorted(one);
+        list.printList();
+        list.insertSorted(one);
         list.printList();
 
     }

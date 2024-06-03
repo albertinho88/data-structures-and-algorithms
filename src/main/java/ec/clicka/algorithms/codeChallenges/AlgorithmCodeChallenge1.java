@@ -1,4 +1,4 @@
-package ec.clicka.algorithms.code.challenges;
+package ec.clicka.algorithms.codeChallenges;
 
 import ec.clicka.util.ArrayUtil;
 
@@ -8,7 +8,7 @@ import ec.clicka.util.ArrayUtil;
  * - Use the usual example array
  * - Start with existing code
  */
-public class CodeChallenge1 {
+public class AlgorithmCodeChallenge1 {
     public static void main(String[] args) {
         int[] numbers = {20,35,-15,7,55,1,-22};
         System.out.println(ArrayUtil.printArray(numbers, 0, numbers.length));

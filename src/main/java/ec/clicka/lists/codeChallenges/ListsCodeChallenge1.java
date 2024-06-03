@@ -1,4 +1,4 @@
-package ec.clicka.lists.code.challenges;
+package ec.clicka.lists.codeChallenges;
 
 import ec.clicka.lists.linked.doubly.EmployeeDoublyLinkedList;
 import ec.clicka.model.Employee;
@@ -7,7 +7,7 @@ import ec.clicka.model.Employee;
  *  INSTRUCTIONS:
  * - Implement the addBefore() method for the EmployeeDoublyLinkedList class
  */
-public class CodeChallenge1 {
+public class ListsCodeChallenge1 {
     public static void main(String[] args) {
 
         Employee janeJones = new Employee("Jane", "Jones", 123);

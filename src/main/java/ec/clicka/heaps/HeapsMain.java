@@ -16,5 +16,6 @@ public class HeapsMain {
         heap.printHeap();
         heap.delete(0);
         heap.printHeap();
+        System.out.println(heap.peek());
     }
 }

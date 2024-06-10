@@ -46,6 +46,19 @@ public class Heap {
         return deletedValue;
     }
 
+    public void sort() {
+        int lastHeapIndex = size - 1;
+        for (int i=0;i<lastHeapIndex;i++) {
+            //swap
+            int tmp = heap[0];
+            heap[0] = heap[lastHeapIndex - i];
+            heap[lastHeapIndex - i] = tmp;
+
+            //heapify
+            fixHeapBelow(0, lastHeapIndex - i - 1);
+        }
+    }
+
     private void fixHeapAbove(int index) {
         int newValue = heap[index];
         while (index > 0 && newValue > heap[getParent(index)]) {
@@ -84,7 +97,7 @@ public class Heap {
     }
 
     public void printHeap() {
-        for (int i = 0; i < heap.length; i++) {
+        for (int i = 0; i < size; i++) {
             System.out.print(heap[i]);
             System.out.print(",");
         }

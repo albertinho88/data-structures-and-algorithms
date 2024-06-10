@@ -1,7 +1,5 @@
 package ec.clicka.heaps;
 
-import ec.clicka.util.ArrayUtil;
-
 public class HeapsMain {
     public static void main(String[] args) {
         Heap heap = new Heap(10);
@@ -14,9 +12,11 @@ public class HeapsMain {
         heap.insert(52);
         heap.insert(67);
         heap.printHeap();
-        /*heap.delete(0);
+
+        heap.delete(0);
         heap.printHeap();
-        System.out.println(heap.peek());*/
+        System.out.println(heap.peek());
+
         heap.sort();
         heap.printHeap();
     }

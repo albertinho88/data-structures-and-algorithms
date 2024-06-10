@@ -1,7 +1,5 @@
 package ec.clicka.heaps;
 
-import ec.clicka.util.ArrayUtil;
-
 import java.util.PriorityQueue;
 
 public class PriorityQueueJdkMain {

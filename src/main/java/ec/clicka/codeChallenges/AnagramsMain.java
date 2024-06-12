@@ -11,6 +11,10 @@ public class AnagramsMain {
         word1 = "binary";
         word2 = "brainy";
         System.out.println(word1 + " and " + word2 + (areAnagrams(word1, word2)?" are ":" are not ") + "anagrams");
+
+        word1 = "Paris";
+        word2 = "pairs";
+        System.out.println(word1 + " and " + word2 + (areAnagrams(word1, word2)?" are ":" are not ") + "anagrams");
     }
 
     public static boolean areAnagrams(String word1, String word2) {
@@ -18,6 +22,9 @@ public class AnagramsMain {
         if (word1.length() != word2.length()) {
             return false;
         }
+
+        word1 = word1.toLowerCase();
+        word2 = word2.toLowerCase();
 
         HashMap<Character, Integer> w1HashMap = new HashMap<>();
         for (int i=0;i<word1.length();i++) {

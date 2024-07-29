@@ -104,23 +104,90 @@ Pueden haber muchos algoritmos que realicen una misma tarea.
 
 ### Algoritmos de Ordenamiento
 
+**In-place algorithm.-** Algoritmo que no utiliza otro arreglo para ordenar, aunque si puede utilizar variables temporales.
+
+**Algoritmo de ordenamiento estable.-** Preserva el orden relativo the elementos duplicados.
+
+**Algoritmo de ordenamiento inestable.-** No preserva el orden relativo the elementos duplicados.
+
 #### Bubble Sort
+
+- Se degrada rápidamente.
+- In-place algorithm.
+- O(n2) - Time Complexity Cuadrático.
 
 #### Selection Sort
 
+- In-place algorithm.
+- O(n2) - Time Complexity Cuadrático.
+- No requiere tanto intercambio de elementos como Bubble Sort.
+- Algoritmo inestable.
+
 #### Insertion Sort
+
+- In-place algorithm.
+- O(n2) - Time Complexity Cuadrático.
+- Algoritmo estable.
+- Empieza en la posición 1. Cada iteración compara un elemento con los elementos a su izquierda desplazandolos e insertando el nuevo elemento si es menor que alguno de ellos.
 
 #### Shell Sort
 
+- Variación de Insertion Sort.
+- Insertion Sort escoge que elemento insertar utilizando una brecha (gap) de 1.
+- Shell Sort empieza utilizando una brecha (gap) mayor.
+- A medida que se ejecuta el algoritmo, la brecha (gap) se reduce.
+- El objetivo es reducir la cantidad de desplazamiento de elementos.
+- El último valor de la brecha (gap) es siempre 1.
+- In-place algorithm.
+- Su peor escenario es O(n2), pero puede tener un mejor rendimiento que time complexity cuadrático.
+- Algoritmo inestable.
+
 #### Merge Sort
+
+- Algoritmo recursivo.
+- No in-place algorithm.
+- O(n log2 n) time complexity, repetitivamente particionamos el arreglo en dos mitades.
+- Algoritmo estable.
 
 #### Quick Sort
 
+- Algoritmo recursivo.
+- No in-place algorithm.
+- O(n log2 n) time complexity, repetitivamente particionamos el arreglo en dos mitades.
+- Algoritmo inestable.
+- Peor escenario: O(n<sup>2</sup>)
+- Escenario promedio: O(n log2 n)
+
 #### Counting Sort
+
+- Hace suposiciones sobre los datos.
+- No hace comparaciones.
+- Cuenta el número de ocurrencia de cada valor.
+- Solo funciona con valores discretos no negativos.
+- Los valores deben estar en un rango específico.
+- No in-place algorithm.
+- O(n) time complexity.
+- Si queremos que el ordenamiento sea estable, algunos pasos extra deben ser ejecutados.
 
 #### Radix Sort
 
+- Hace suposiciones sobre los datos.
+- Los datos deben tener el mismo radio y ancho. Por lo tanto los datos deben ser enteros (integers) o cadenas de caracteres (strings).
+- Ordenamiento basado en la posición individual de cada dígito o letra.
+- Comienza en la posición más a la derecha.
+- Debe usar un algoritmo de ordenamiento estable en cada etapa.
+- Counting Sort es frecuentemente usado como el algoritmo de ordenamiento para Radix Sort. (Stable Counting Sort).
+- O(n) time complexity.
+
 #### Ordenamiento de arreglos con funciones del JDK
+
+- Arrays.sort()
+  - O(n log n)
+  - Dual-Pivot Quicksort. Típicamente mas rápido que el tradicional One-Pivot Quicksort.
+- Arrays.parallelSort()
+  - Utiliza hilos (threads)
+  - Parallel Merge Sort.
+  - Orden el rango especificado del arreglo utilizando Parallel Merge Sort y/o Dual-Pivot Quicksort.
 
 #### Bucket Sort
 

@@ -95,11 +95,30 @@ Los arreglos se almacenan como bloques contiguos en memoria. Cada elemento ocupa
   
   #### Vectors
   
+  - Thread-safe ArrayList.
+  - Apareció antes que ArrayList.
+  - Vector es sincronizado. Si es que no se necesita una implementación thread-safe, es recomendado usar ArrayLists en vez de Vector.
+  
   #### Singly Linked Lists
+  
+  - Una lista secuencial de objetos.
+  - No se involucran arreglos aquí.
+  - Cada item en la lista se llama nodo.
+  - El primer elemento en la lista es la cabeza de la lista.
+  - Se llama Singly Linked List porque hay un enlace entre nodos.
   
   #### Doubly Linked Lists
   
+  - Cada item en la lista tiene los campos siguiente y previo.
+  - La lista tiene una cabeza y una cola.
+  
   #### JDK LinkedList Class
+  
+  - Es una implementación DoublyLinkedList de las interfaces List y Deque.
+  - Puede ser usada con cualquier tipo de objeto.
+  - Esta implementación no es sincronizada.
+  - No es respaldada por un arreglo u otra estructura de datos.
+  - Contiene referencias a nodos.
 
 ### Pilas (Stacks)
 

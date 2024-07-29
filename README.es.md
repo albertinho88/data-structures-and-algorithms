@@ -114,19 +114,19 @@ Pueden haber muchos algoritmos que realicen una misma tarea.
 
 - Se degrada rápidamente.
 - In-place algorithm.
-- O(n2) - Time Complexity Cuadrático.
+- O(n<sup>2</sup>) - Time Complexity Cuadrático.
 
 #### Selection Sort
 
 - In-place algorithm.
-- O(n2) - Time Complexity Cuadrático.
+- O(n<sup>2</sup>) - Time Complexity Cuadrático.
 - No requiere tanto intercambio de elementos como Bubble Sort.
 - Algoritmo inestable.
 
 #### Insertion Sort
 
 - In-place algorithm.
-- O(n2) - Time Complexity Cuadrático.
+- O(n<sup>2</sup>) - Time Complexity Cuadrático.
 - Algoritmo estable.
 - Empieza en la posición 1. Cada iteración compara un elemento con los elementos a su izquierda desplazandolos e insertando el nuevo elemento si es menor que alguno de ellos.
 
@@ -146,17 +146,17 @@ Pueden haber muchos algoritmos que realicen una misma tarea.
 
 - Algoritmo recursivo.
 - No in-place algorithm.
-- O(n log2 n) time complexity, repetitivamente particionamos el arreglo en dos mitades.
+- O(n log<sub>2</sub> n) time complexity, repetitivamente particionamos el arreglo en dos mitades.
 - Algoritmo estable.
 
 #### Quick Sort
 
 - Algoritmo recursivo.
 - No in-place algorithm.
-- O(n log2 n) time complexity, repetitivamente particionamos el arreglo en dos mitades.
+- O(n log<sub>2</sub> n) time complexity, repetitivamente particionamos el arreglo en dos mitades.
 - Algoritmo inestable.
 - Peor escenario: O(n<sup>2</sup>)
-- Escenario promedio: O(n log2 n)
+- Escenario promedio: O(n log<sub>2</sub> n)
 
 #### Counting Sort
 
@@ -182,7 +182,7 @@ Pueden haber muchos algoritmos que realicen una misma tarea.
 #### Ordenamiento de arreglos con funciones del JDK
 
 - Arrays.sort()
-  - O(n log n)
+  - O(n log<sub>2</sub> n)
   - Dual-Pivot Quicksort. Típicamente mas rápido que el tradicional One-Pivot Quicksort.
 - Arrays.parallelSort()
   - Utiliza hilos (threads)

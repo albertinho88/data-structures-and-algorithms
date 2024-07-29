@@ -76,11 +76,60 @@ Los arreglos se almacenan como bloques contiguos en memoria. Cada elemento ocupa
 | Eliminar un elemento estableciéndolo como null                         | O(1)            |
 | Eliminar un elemento desplazando elementos                              | O(n)            |
 
+### Estructura de Datos Abstractos
+
+- No es una esctructura de datos concreta.
+- No dicta como los datos están organizados, sino que dicta las operaciones que pueden ser ejecutadas.
+- Una estructura de datos concreta es usualmente una Clase concreta, mientras que una estructura de datos abstracta es usualmente una interfaz.
+
 ### Listas (Lists)
+
+- Estructura de datos abstracta.
+- Estructura de datos ordenanda.
+  
+  #### ArrayLists
+  
+  - Implementación de un arreglo redimensionable de la interfaz de List. (El arreglo es llamado Backing Array).
+  - Un ArrayList debe tener una capacidad inicial y un tamaño (son diferentes valores).
+  - Capacidad inicial por defecto = 10.
+  
+  #### Vectors
+  
+  #### Singly Linked Lists
+  
+  #### Doubly Linked Lists
+  
+  #### JDK LinkedList Class
 
 ### Pilas (Stacks)
 
+- Estructura de datos abstracta.
+- Puede ser respaldada por cualquier estructura de datos.
+- LIFO -> Last in, first out. (No random access)
+- Operaciones:
+  - push.- agregar un elemento como el elemento de más arriba de la pila.
+  - pop.- remover el elemento de más arriba de la pila.
+  - peek.- obtener el elemento de más arriba de la pila sin removerlo.
+- La estructura de datos ideal para respaldar o implementar una pila es LinkedList.
+- Time Complexity
+  - O(1) -> para push, pop, peek (LinkedList)
+  - O(n) -> para push (Array, el arreglo podria ser redimensionando)
+  
+  #### JDK Stack Class
+  
+  - Extiende de la clase Vector con 5 operaciones que permiten al vector ser tratado como una pila.
+  - La documentación de la clase Stack dice que un conjunto de operaciones LIFO más completas y consistentes son definidas por la interfaz Deque y sus implementaciones. Ejemplo:
+
+```
+Deque<Integer> stack = new ArrayDeque<Integer>();
+```
+
 ### Colas (Queues)
+
+- Estructura de datos abstracta.
+- FIFO - First in, first out.
+- Operaciones:
+- 
 
 ### Tablas Hash (Hashtables)
 
@@ -188,6 +237,8 @@ Pueden haber muchos algoritmos que realicen una misma tarea.
   - Utiliza hilos (threads)
   - Parallel Merge Sort.
   - Orden el rango especificado del arreglo utilizando Parallel Merge Sort y/o Dual-Pivot Quicksort.
+
+Para ordenar un arreglo de objetos se debe implementar la interface Comparable.
 
 #### Bucket Sort
 

@@ -107,13 +107,15 @@ Los arreglos se almacenan como bloques contiguos en memoria. Cada elemento ocupa
 - Puede ser respaldada por cualquier estructura de datos.
 - LIFO -> Last in, first out. (No random access)
 - Operaciones:
+  
   - push.- agregar un elemento como el elemento de más arriba de la pila.
   - pop.- remover el elemento de más arriba de la pila.
   - peek.- obtener el elemento de más arriba de la pila sin removerlo.
 - La estructura de datos ideal para respaldar o implementar una pila es LinkedList.
 - Time Complexity
+  
   - O(1) -> para push, pop, peek (LinkedList)
-  - O(n) -> para push (Array, el arreglo podria ser redimensionando)
+  - O(n) -> para push (Array, el arreglo podría ser redimensionando)
   
   #### JDK Stack Class
   
@@ -129,9 +131,37 @@ Deque<Integer> stack = new ArrayDeque<Integer>();
 - Estructura de datos abstracta.
 - FIFO - First in, first out.
 - Operaciones:
-- 
+  
+  - add.- también llamada enqueue, agrega un elemento al final de la cola.
+  - remove.- también llamada dequeue, remueve el elemento al frente de la cola.
+  - peeke.- obtiene el elemento al frente de la cola, pero no lo remueve.
+- Time Complexity:
+  
+  - LinkedList - O(1)
+  - Array - O(n) el arreglo podría ser redimensionado después de agregar un elemento.
+  
+  #### Queues and the JDK
+  
+  - Queue interface.
 
 ### Tablas Hash (Hashtables)
+
+- Estructura de datos abstracta.
+- Provee acceso a los datos utilizando llaves (keys).
+- La llave (key) no debe ser un entero.
+- Consiste the pares llave-valor (key-value). Los tipos de datos no tienen que coincidir.
+- Optimizado para la recuperación de valores cuando se conoce la llave (key).
+- Un arreglo asociativo (associative array) es un tipo de tabla hash.
+  
+  #### Hashing
+  
+  #### Load Factor
+  
+  #### Linear Probing
+  
+  #### Chaining
+  
+  #### Hashtables and the JDK
 
 ### Árboles (Trees)
 

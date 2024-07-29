@@ -155,19 +155,92 @@ Deque<Integer> stack = new ArrayDeque<Integer>();
   
   #### Hashing
   
+  - Una función Hash mapea llaves (keys) de cualquier tipo a un entero (int).
+  - En java, la función hash es Object.hashCode()
+  - Una colisión sucede cuando más de un elemento tiene el mismo valor hash.
+  
   #### Load Factor
+  
+  - Nos dice cuan llena está una tabla hash.
+  - Load Factor = número de items / capacidad = tamaño / capacidad.
+  - El Load Factor se utiliza para decidir cuando redimensionar el arreglo que implementa la tabla Hash.
+  - No es deseable un Load Factor muy bajo, ya que habrán muchos espacios vacíos.
+  - No es deseable un Load Factor muy alto, ya que incrementará la probabilidad de colisiones.
   
   #### Linear Probing
   
+  - Estrategia utilizada cuando sucede una colisión.
+  
   #### Chaining
   
+  - Otra estrategia para manejar colisiones.
+  - En vez de almacenar el valor directamente en el arreglo, cada posición en el arreglo contiene una LinkedList.
+  - La implementación de Chaining es más fácil que la de Linear Probing, pero no quiere decir que necesariamente tenga un mejor rendimiento.
+  - El rendimiento depende en la función Hash y el Load Factor.
+  
   #### Hashtables and the JDK
+  
+  - La interfaz principal para Hashtables es Map.
+  - Map es una interfaz del tipo llave-valor par (key-value pair)
+  - Es un objeto que mapea llaves a valores.
+  - Un map no puede contener llaves duplicadas, y cada llave puede mapear máximo a un valor.
+    
+    ##### HashMap
+    
+    - Clase concreta de la interfaz Map.
+    - Esta implementación provee un rendimiento constante en tiempo para las operaciones básicas (get y put)
+    - Load Factor por defecto 0.75
+    - Esta implementación no es sincronizada (synchronized)
+    - Es una implementación de arreglo.
+    
+    ##### LinkedHashMap
+    
+    - Implementación de tabla hash y lista enlazada de la interfaz Map.
+    - Esta implementación difiere de HashMap en que mantiene un lista enlazada doble (DoublyLinkedList) en todas sus entradas. Esta lista enlazada define el orden de iteración, que normalmente es el orden en el que se insertaron las claves en el mapa (orden de inserción).
+    - Esta implementación no es sincronizada (synchronized)
+    
+    ##### Hashtable Class
+    
+    - Esta clase implementa una tabla hash, la cual mapea llaves a valores.
+    - Cualquier objecto no nulo (non-null) puede ser usado como llave or como valor.
+    - Esta implementación es sincronizada.
 
 ### Árboles (Trees)
 
+- Los árboles dictan como organizar los datos, but también se pueden implementar ciertos tipos de árboles con arreglos.
+- Es una estructura de datos jerárquica.
+- Cada item en el árbol es un nodo.
+- El nodo superior del árbol es la raíz.
+- Cada nodo que no es raíz tiene uno y solo un padre.
+- Un nodo hoja no tiene hijos.
+- Un árbol singleton tiene un solo nodo (la raíz)
+- La profundidad de un nodo es el número de aristas desde el nodo hasta la raíz.
+- La profundidad de la raíz es siempre 0.
+- La altura de un nodo es el número de aristas en la ruta más larga desde el nodo hasta la hoja.
+- La altura de un nodo hoja es siempre 0.
+- La altura de un árbol es la altura de su raíz.
+  
+  #### Árbol Binario (Binary Tree)
+  
+  #### Binary Search Tree
+  
+  #### Trees and the JDK
+  
+  - TreeMap<K,V>
+  - TreeSet<E>
+    - Estructura que no puede contener duplicados.
+
 ### Heaps
 
+- Heap es un tipo especial de árbol binario.
+- Árbol binario completo
+
 ### Sets
+
+- Estructura de datos abstracta.
+- Aplicable a cualquier estructura de datos.
+- Es una colección que no contiene elementos duplicados.
+- Un Set puede contener un elemento nulo.
 
 ## Algoritmos
 
@@ -272,11 +345,25 @@ Para ordenar un arreglo de objetos se debe implementar la interface Comparable.
 
 #### Bucket Sort
 
+- Utiliza hashing.
+- Hace suposiciones sobre los datos, por lo tanto puede ordenar en O(n) time complexity.
+
 ### Algoritmos de Búsqueda
 
 Un algoritmo de búsqueda tiene como propósito encontrar un valor (dato) en una estructura de datos.
 
 #### Búsqueda Lineal
 
+- Búsqueda simple.
+- O(n) time complexity.
+
 #### Búsqueda Binaria
+
+- Los datos deben estar ordenados.
+- Escoge el elemento de la mitad del arreglo y lo compara con el valor a buscar. Si son iguales la búsqueda termina.
+- Si el elemento es mayor que el valor a buscar, buscará en la mitad izquierda del arreglo.
+- Si el elemento es menor que el valor a buscar, buscará en la mitad derecha del arreglo.
+- En algún punto, habrá solo un elemento, pero no se tiene que llegar a ese punto.
+- Puede ser implementada recursivamente.
+- O(log n) -> ya que se mantiene dividiendo el arreglo en 2 partes.
 
